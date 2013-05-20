@@ -1,4 +1,7 @@
 Disambiguation::Application.routes.draw do
+  resources :universes
+
+
   authenticated :user do
     root :to => 'home#index'
   end
