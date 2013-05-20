@@ -1,29 +1,14 @@
 h1. Disambiguation
 
-This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.io/.
 
-h2. Diagnostics
-
-This application was built with recipes that are known to work together.
-
-This application was built with preferences that are NOT known to work together.
-
-If the application doesn't work as expected, please "report an issue":https://github.com/RailsApps/rails_apps_composer/issues and include these diagnostics:
-
-We'd also like to know if you've found combinations of recipes or preferences that do work together.
-
-Recipes:
-["controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
-
-Preferences:
-{:git=>true, :railsapps=>"none", :dev_webserver=>"webrick", :database=>"mysql", :templates=>"erb", :unit_test=>"rspec", :integration=>"rspec-capybara", :continuous_testing=>"none", :fixtures=>"factory_girl", :frontend=>"bootstrap", :bootstrap=>"sass", :email=>"gmail", :authentication=>"devise", :devise_modules=>"default", :authorization=>"cancan", :form_builder=>"simple_form", :starter_app=>"admin_app", :rvmrc=>true, :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :ban_spiders=>true, :jsruntime=>true, :github=>true}
 
 h2. Ruby on Rails
 
-This application requires:
+This application uses:
 
 * Ruby version 1.9.3
 * Rails version 3.2.12
+* Rails MySql2 version 0.3.11
 
 Learn more about "Installing Rails":http://railsapps.github.io/installing-rails.html.
 
@@ -33,6 +18,7 @@ This application uses MySQL with ActiveRecord.
 
 h2. Development
 
+This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.io/.
 * Template Engine: ERB
 * Testing Framework: RSpec and Factory Girl
 * Front-end Framework: Twitter Bootstrap (Sass)
@@ -46,7 +32,7 @@ The application is configured to send email using a Gmail account.
 
 h2. Getting Started
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Can't use it yet, stil building
 
 h2. Documentation and Support
 
@@ -54,11 +40,11 @@ This is the only documentation.
 
 h4. Issues
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Wait till after dev, then compain
 
 h2. Similar Projects
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+If you find any, let me know
 
 h2. Contributing
 
@@ -73,8 +59,8 @@ If you add functionality to this application, create an alternative implementati
 
 h2. Credits
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+A lifetime of playing table top games
 
 h2. License
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+MIT standard
