@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521002223) do
+ActiveRecord::Schema.define(:version => 20130521073703) do
+
+  create_table "characters", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "selfcontrol"
+    t.string   "approach"
+    t.string   "efficacy"
+    t.string   "regard"
+    t.integer  "universe_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "characters", ["universe_id"], :name => "index_characters_on_universe_id"
 
   create_table "locations", :force => true do |t|
     t.string   "name"

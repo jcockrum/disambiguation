@@ -1,4 +1,7 @@
 Disambiguation::Application.routes.draw do
+  resources :characters
+
+
   resources :locations
 
 
