@@ -2,6 +2,7 @@ class UniversesController < ApplicationController
   # GET /universes
   # GET /universes.json
   def index
+    session[:universe] = nil
     @universes = Universe.all
 
     respond_to do |format|
@@ -15,7 +16,7 @@ class UniversesController < ApplicationController
   def show
     @universes = Universe.all #for sidebar
     @universe = Universe.find(params[:id])
-
+    session[:universe] = @universe
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @universe }

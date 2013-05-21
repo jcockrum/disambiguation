@@ -1,0 +1,12 @@
+<div class="location">
+  <div class="content">
+    <h3><%= link_to location.name, location %></h3>
+    <%= location.description %>
+    <div class="actions">
+      <%= link_to "New Sub-Locaion", new_location_path(:parent_id => location), :class => 'btn btn-mini'%>
+      <%= link_to 'edit', edit_location_path(location), :class => 'btn btn-mini' %>
+      <%= link_to "Destroy", location, :confirm => "Are you sure?", :method => :delete, :class => 'btn btn-mini btn-danger'  %>
+    </div>
+  </div>
+</div>
+

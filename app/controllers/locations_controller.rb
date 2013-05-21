@@ -2,8 +2,8 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
-
+    @locations = Location.scoped
+    @location = Location.new
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @locations }
@@ -24,7 +24,7 @@ class LocationsController < ApplicationController
   # GET /locations/new
   # GET /locations/new.json
   def new
-    @location = Location.new
+    @location = Location.new(:parent_id => params[:parent_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +41,7 @@ class LocationsController < ApplicationController
   # POST /locations.json
   def create
     @location = Location.new(params[:location])
-
+    @location.universe = session[:universe] 
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }

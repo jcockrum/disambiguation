@@ -1,7 +1,12 @@
-              <h3>Sidebar</h3>
+              <h3>Blah blah</h3>
               <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
+                <li class="nav-header">Navagation</li>
+                <%if current_user%>
+                  <li><%= link_to 'Universes', universes_path %></li>
+                <% end %>
+                <% if current_universe %>
+                  <li><%= link_to 'Locations', locations_path%> </li>
+                <% end %>  
               </ul>
+              
+
