@@ -13,6 +13,7 @@ class UniversesController < ApplicationController
   # GET /universes/1
   # GET /universes/1.json
   def show
+    @universes = Universe.all #for sidebar
     @universe = Universe.find(params[:id])
 
     respond_to do |format|
@@ -25,7 +26,6 @@ class UniversesController < ApplicationController
   # GET /universes/new.json
   def new
     @universe = Universe.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @universe }
@@ -41,7 +41,7 @@ class UniversesController < ApplicationController
   # POST /universes.json
   def create
     @universe = Universe.new(params[:universe])
-
+    @universe.user = current_user;
     respond_to do |format|
       if @universe.save
         format.html { redirect_to @universe, notice: 'Universe was successfully created.' }

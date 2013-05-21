@@ -1,9 +1,7 @@
 Disambiguation::Application.routes.draw do
   resources :universes
-
-
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'universes#index'
   end
   root :to => "home#index"
   devise_for :users

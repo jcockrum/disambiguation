@@ -5,7 +5,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:user_id) %></th>
@@ -16,11 +15,10 @@
   <tbody>
     <% @universes.each do |universe| %>
       <tr>
-        <td><%= link_to universe.id, universe_path(universe) %></td>
-        <td><%= universe.name %></td>
+        <td><%= link_to universe.name, universe_path(universe) %></td>
         <td><%= universe.description %></td>
         <td><%= universe.user_id %></td>
-        <td><%=l universe.created_at %></td>
+        <td><%= universe.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_universe_path(universe), :class => 'btn btn-mini' %>
@@ -38,3 +36,5 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_universe_path,
             :class => 'btn btn-primary' %>
+<%#TODO: add date formating for universes created at
+%>
