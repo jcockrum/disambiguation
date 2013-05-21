@@ -8,6 +8,7 @@ gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
 gem "libv8", ">= 3.11.8"
+gem 'ancestry'
 
 
 group :assets do

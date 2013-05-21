@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520225245) do
+ActiveRecord::Schema.define(:version => 20130521002223) do
+
+  create_table "locations", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "universe_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "ancestry"
+  end
+
+  add_index "locations", ["ancestry"], :name => "index_locations_on_ancestry"
+  add_index "locations", ["universe_id"], :name => "index_locations_on_universe_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
