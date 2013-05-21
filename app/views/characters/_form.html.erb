@@ -1,13 +1,26 @@
 <%= simple_form_for @character, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :selfcontrol %>
-  <%= f.input :approach %>
-  <%= f.input :efficacy %>
-  <%= f.input :regard %>
+  <%= #f.select :selfcontrol,  :collection => Character.Ary_selfcontrol 
+  %>
+  
+  <%= f.select :selfcontrol, :collection => Character.Ary_selfcontrol,
+               :as => :grouped_select,
+               :group_method => Ary_selfcontrol,
+               :group_label_method => :name,
+               :label_method => :title,
+               :include_blank => "Please Choose..."      
+  %>
+
+  <%= f.select :approach,     :collection => Character.Ary_approach%>
+  <%= f.select :efficacy,     :collection => Character.Ary_efficacy%>
+  <%= f.select :regard,       :collection => Character.Ary_regard%>
+
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 characters_path, :class => 'btn' %>
   </div>
 <% end %>
+
+    
