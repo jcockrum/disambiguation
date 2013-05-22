@@ -6,7 +6,7 @@
   
   <%= f.select :selfcontrol, :collection => Character.Ary_selfcontrol,
                :as => :grouped_select,
-               :group_method => Ary_selfcontrol,
+               :group_method => :selfcontrol,
                :group_label_method => :name,
                :label_method => :title,
                :include_blank => "Please Choose..."      

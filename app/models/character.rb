@@ -48,12 +48,14 @@ class Character < ActiveRecord::Base
       [
         [
         'Virtue', [
-          ['Temperance',1], ['Frugality',2], ['Contentment',3], ['Continence',4], ['Fortitude',5], ['Integrity',6]
+          ['Temperance','Temperance'], ['Frugality','Frugality'], ['Contentment','Contentment'], 
+          ['Continence','Continence'], ['Fortitude','Fortitude'], ['Integrity','Integrity']
                   ]
         ],
         [
         'Vice', [
-        ['Intemperance',1], ['Excess',2], ['Resentment',3], ['Extravagance',4], ['Discomposure',5], ['Corruption',6]
+        ['Intemperance''Intemperance'], ['Excess','Excess'], ['Resentment','Resentment'], 
+        ['Extravagance','Extravagance'], ['Discomposure','Discomposure'], ['Corruption','Corruption']
               ]
         ]
       ]
