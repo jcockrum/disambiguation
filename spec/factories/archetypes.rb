@@ -1,8 +1,8 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :char_archetype do
-    type ""
+  factory :archetype do
+    name "MyString"
     motto "MyString"
     core_desire "MyString"
     goal "MyString"

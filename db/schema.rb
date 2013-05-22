@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522172607) do
+ActiveRecord::Schema.define(:version => 20130522203031) do
 
-  create_table "char_archetypes", :force => true do |t|
-    t.string   "type"
+  create_table "archetypes", :force => true do |t|
+    t.string   "name"
     t.string   "motto"
     t.string   "core_desire"
     t.string   "goal"
@@ -27,31 +27,7 @@ ActiveRecord::Schema.define(:version => 20130522172607) do
     t.datetime "updated_at",    :null => false
   end
 
-  add_index "char_archetypes", ["character_id"], :name => "index_char_archetypes_on_character_id"
-
-  create_table "char_vices", :force => true do |t|
-    t.string   "selfcontrol"
-    t.string   "approach"
-    t.string   "efficacy"
-    t.string   "regard"
-    t.integer  "character_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  add_index "char_vices", ["character_id"], :name => "index_char_vices_on_character_id"
-
-  create_table "char_virtues", :force => true do |t|
-    t.string   "selfcontrol"
-    t.string   "approach"
-    t.string   "efficacy"
-    t.string   "regard"
-    t.integer  "character_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  add_index "char_virtues", ["character_id"], :name => "index_char_virtues_on_character_id"
+  add_index "archetypes", ["character_id"], :name => "index_archetypes_on_character_id"
 
   create_table "characters", :force => true do |t|
     t.string   "name"

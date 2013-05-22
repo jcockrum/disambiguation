@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
 
+#core
 gem 'rails', '3.2.12'
 gem "mysql2", ">= 0.3.11"
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+#addons
 gem "devise", ">= 2.2.3"
 gem "cancan", ">= 1.6.9"
 gem "rolify", ">= 3.2.0"
@@ -9,7 +14,7 @@ gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
 gem "libv8", ">= 3.11.8"
 gem 'ancestry'
-
+gem "nested_form"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -17,8 +22,6 @@ group :assets do
   gem "bootstrap-sass", ">= 2.3.0.0"
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-rails'
-  gem 'jquery-ui-rails'
   gem "therubyracer", ">= 0.11.3", :platform => :ruby, :require => "v8"
 end
 

@@ -1,7 +1,7 @@
-class CreateCharArchetypes < ActiveRecord::Migration
+class CreateArchetypes < ActiveRecord::Migration
   def change
-    create_table :char_archetypes do |t|
-      t.string :type
+    create_table :archetypes do |t|
+      t.string :name
       t.string :motto
       t.string :core_desire
       t.string :goal
@@ -13,6 +13,6 @@ class CreateCharArchetypes < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :char_archetypes, :character_id
+    add_index :archetypes, :character_id
   end
 end
