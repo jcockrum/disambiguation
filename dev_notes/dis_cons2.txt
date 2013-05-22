@@ -1,0 +1,21 @@
+# Base App 
+rails new test_app -d mysql -m app-template.rb;
+
+rails g scaffold user  name:string; 
+
+# Universe routes
+rails g scaffold universe  name:string user_id:integer; 
+rails g scaffold character name:string universe:references;
+rails g scaffold location  name:string universe:references;
+
+rails g model npc character_id:integer scene_id:integer;
+rails g model event location_id:integer scene_id:integer;
+rails g model storyline story_id:integer scene_id:integer;
+
+# Polymorphic comments
+rails g model part content:text partible_id:integer partible_type:string;
+rails g controller parts;
+
+rails g scaffold story     name:string chapter:integer universe:references;
+rails g scaffold scene     name:string branch:boolean universe:references;
+

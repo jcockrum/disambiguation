@@ -1,0 +1,74 @@
+part
+
+partible
+
+
+#needs a controler as well
+rails g model part content:text author_id:integer partible_id:integer partible_type:string
+rails g controller part
+
+
+#in routes.rb, add this to each model that has parts
+<model_name>, :has_many => :parts
+
+#in Part model
+
+belongs_to :partible, :polymorphic => true
+
+#in other models
+has_many :parts, :as => :partible
+
+
+#in parts index.html.erb
+<h1>Parts</h1>
+
+<ul id="parts">
+  <% @parts.each do |part| %>
+    <li><%= part.content %></li>
+  <% end %>
+</ul>
+
+<h2>New Part</h2>
+<% form_for [@partible, part.new] do |form| %>
+  <ol class="formList">
+    <li>
+      <%= form.label :content %>
+      <%= form.text_area :content, :rows => 10 %>
+    </li>
+    <li><%= submit_tag "Add part" %></li>
+  </ol>
+<% end %>
+
+
+
+#in Controller
+
+  before_filter :load_partible
+  
+  def index
+    @parts = @partible.parts
+  end
+
+  def new
+    @part = @partible.parts.new
+  end
+
+  def create
+    @part = @partible.parts.new(params[:part])
+    if @part.save
+      redirect_to @partible, notice: "part created."
+    else
+      render :new
+    end
+  end
+
+private
+
+  def load_partible
+    resource, id = request.path.split('/')[1, 2]
+    @partible = resource.singularize.classify.constantize.find(id)
+  end
+
+
+
+

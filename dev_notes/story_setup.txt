@@ -1,0 +1,29 @@
+paths:
+    Index
+    Setup Story
+    Play Story(role dependant)
+    
+SETUP
+    set name
+    autoset role: author/gamemaster(GM)
+    add players
+    add scene(s)
+        add scene.parts
+        add branching text (if desired)
+
+Play -> Player view
+    Auto show first scene.part
+    Shows scene.parts as enabled by the GM
+    Scenes.part are editable
+    
+Play -> GM view
+    show all scene.parts
+        each scene.part will have enable button && checklist of players
+            onclick will show .part to each player that has a check
+        all scene.parts are editible
+    set scenes in a chain
+        (auto)set scene.chapter value
+        set scene to scene bridge pp(branches)
+            lists all (universe)scenes that do not have a branch set (for story to story branching)
+        add scene.part (branch text)
+            pulls from sets of stock text (context driven functionality later[catagories?])

@@ -1,0 +1,37 @@
+# Base App 
+rails new disambiguation -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+
+# Universe routes
+rails g scaffold universe  name:string user:references; 
+rails g scaffold character name:string selfcontrol:string approach:string efficacy:string regard:string universe:references
+rails g scaffold location  name:string universe_id:integer universe:references
+rails g scaffold storyarc  name:string universe_id:integer universe:references
+
+# Storyarc routes
+rails g scaffold story      name:string storyarc_id:integer storyarc:references
+rails g scaffold scene      name:string act:integer chapter:integer story_id:integer story:references
+rails g scaffold society    structure:string source:string social:string religion:string scene_id:integer scene:references
+rails g scaffold branch     name:string scene_id:integer scene:references
+
+
+#connections for scenes
+rails g model plotline      scene_id:integer branches_id:integer; rails g controller plotlines
+
+
+# Polymorphic comments
+rails g model part content:text partible_id:integer partible_type:string;
+rails g controller parts
+
+Removed:
+rails g scaffold event      name:string location_id:integer location:references
+rails g scaffold physics    position:string size:string weight:float energy:string force:string event_id:integer event:references
+
+
+
+
+
+
+
+
+
+

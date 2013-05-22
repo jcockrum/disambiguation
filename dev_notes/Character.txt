@@ -1,0 +1,103 @@
+Virtue		    Vice	
+			
+Self control	(willpower over actions)
+			
+Temperance		Debauchery	
+Frugality		Excess	
+Contentment		Resentment	
+Continence		Extravagance	
+Determination	Indecisive	
+Integrity		Corruption	
+			
+Approach		(The manner Actions are done)
+			
+Initiative		Lethargically	
+contemplative	Neglectfully	
+Resourceful		Awkward	
+Creative		Uninspired	
+Perseverance	Inconstant
+Straightforward Devious
+Serene          Obsessive
+	
+Efficacy	    (the power to produce effects)
+			
+Courage		    Cowardice	
+Patience	    Intolerance	
+Humility	    Arrogance	
+	
+			
+Regard			(how respect or concern is shown)
+			
+Gratitude		Disregard	
+Impartial   	Biased	
+Tolerance 		Prejudice	
+Honest		    Treacherous
+
+
+@ary_selfcontrol = 
+[  
+    [
+        'Virtue', [
+               ['Temperance',1], ['Frugality',2], ['Contentment',3], ['Continence',4], ['Fortitude',5], ['Integrity',6]
+                ]
+    ],     [
+        'Vice', [
+             ['Intemperance',1], ['Excess',2], ['Resentment',3], ['Extravagance',4], ['Discomposure',5], ['Corruption',6]
+            ]
+    ]
+]
+
+@ary_efficacy =	         
+[  
+    [
+        'Virtue', [
+               ['Courage',1], ['Patience',2], ['Humility',3], ['passion',4]
+                ]
+    ],     [
+        'Vice', [
+              ['cowardice',1], ['intolerance',2], ['arrogance',3], ['indifference',4]
+            ]
+    ]
+]
+
+@ary_regard =
+[  
+    [
+        'Virtue', [
+              ['Gratitude',1], ['righteousness',2], ['Tolerance ',3], ['Honesty',4]
+                ]
+    ],     [
+        'Vice', [
+              ['disregard',1], ['bias',2], ['prejudice',3], ['treachery',4]
+            ]
+    ]
+]
+
+@ary_respect =
+[  
+    [
+        'Virtue', [
+               ['Dignity',1], ['Politeness',2], ['Generosity',3], ['Forgiveness',4], ['Compassion',5]
+                ]
+    ],     [
+        'Vice', [
+             ['insecurity',1], ['Rude',2], ['Greedy',3], ['vindictive',4], ['cruelty',5]
+            ]
+    ]
+]
+
+@ary_approach =
+[  
+    [
+        'Virtue', [
+               ['Initiative',1], ['contemplate',2], ['Resourceful',3], ['Creative',4], ['Perseverance',5]
+                ]
+    ],     [
+        'Vice', [
+             ['lethargy',1], ['neglect',2], ['stupid',3], ['uninspired',4], ['Inconstancy',5]
+            ]
+    ]
+]	
+
+
+

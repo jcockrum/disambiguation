@@ -1,0 +1,18 @@
+cd /etc/apache2/sites-enabled; sed s/railsapp/Disambiguation/ <railsapp >Disambiguation; rm railsapp; cd /etc/apache2/sites-available; sed s/railsapp/Disambiguation/ <railsapp >Disambiguation; rm railsapp; cd /etc/apache2/conf; sed s/railsapp/Disambiguation/ <railsapp.conf >Disambiguation.conf; rm railsapp.conf;
+
+
+ cd ~; apt-get update; apt-get install libcurl4-openssl-dev; cd /var/www/Disambiguation; gem install passenger --no-ri --no-rdoc; passenger-install-apache2-module;
+ 
+ 
+ service apache2 restart
+ 
+ 
+ DocumentRoot /var/www/Disambiguation/public
+    <Directory /var/www/Disambiguation/public>
+        Allow from all
+        Options -MultiViews
+    </Directory>
+    
+    
+    
+    ./configure; make; make install;

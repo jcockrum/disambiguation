@@ -1,0 +1,48 @@
+Society
+
+
+Economic  econ_types => [[Market,1], [Mixed,2], [Planned,3], [Participatory,4], [Gift,5], [Barter,6]]
+
+Social System
+    interaction structure[[Hunting-and-Gathering,1], [Horticultural,2], [Agrarian,3], [Industrial,4], [Postindustrial,5], [Postmodern,6]]
+    material conditions [[employment,1], [income,2], [health,3], [education,4], [housing,5]]
+
+Values
+    Solidarity [Shared, Organic, interdependence]
+    Social order[Groups,  norms, authority, Spontaneous,honor]
+
+
+
+
+
+
+Religon
+Philosophy 
+phil_types => [Agnosticism, Atheism, Deism, Henotheism, Henology, Theism, Pantheism, Panentheism ,Monotheism, Polytheism]
+ 
+organization Adherents => []
+			 'Clergy' => [[abbess,1], [abbot,2], [acolyte,3], [almoner,4], [altar boy,5], [anchorite,6], [apostle,7]]
+Cult (Purpose, Rituals, ceremonys, myths, Icons [lists of texts, Items, locations, heros])
+    
+Political System
+
+    power_structure
+        [Confederal Federal Hegemony Imperial Unitary]
+
+    power_source
+		'Democracy' =>[[Direct,1],[Representative,2], [Polyarchy,3]],
+		'Monarchy' =>[[Absolute,4], [Constitutional,5]],
+		'Oligarchy' =>[[Aristocracy,6],[Military,7],[junta,8],[Plutocracy,9],[Stratocracy,10],[Timocracy,11]],
+		'Authoritarian'=>[[Autocracy,12],[Despotism,13],[Dictatorship,14],[Totalitarianism,15]],
+		'Other' =>[[Anarchy,16],[Anocracy,17],[Kritarchy,18],[Republic,19], [Theocracy,20]]
+
+    
+
+
+
+        
+
+        
+        
+        
+'Clergy' => [[abbess,1], [abbot,2], [acolyte,3], [almoner,4], [altar boy,5], [anchorite,6], [apostle,7], [apostolic delegate,8], [apostolic nuncio,9], [archbishop,10], [archdeacon,11], [archimandrite,12], [archpriest,13], [aspirant,14], [beadle,15], [beguine,16], [bishop,17], [brother,18], [canon,19], [cantor,20], [cardinal,21], [catechist,22], [cathar perfect,23], [chantry priest,24], [chaplain,25], [choirmaster,26], [choribishop,27], [clark,28], [cleric,29], [clerk,30], [coadjutor,31], [colporteur,32], [commissary,33], [conciliar,34], [consecrated hermit,35], [consecrated virgin,36], [curate,37], [deacon,38], [deaconess,39], [dean,40], [dean (religion),41], [diocesan,42], [diocesan bishop,43], [druid,44], [eucharist,45], [exarch,46], [flamines maiores,47], [flamines minores,48], [friar,49], [hierarch,50], [high priest,51], [imam,52], [incumbent,53], [infirmarian,54], [laity,55], [lay ecclesial minister,56], [metropolitan bishop,57], [monk,58], [monsignor,59], [mother superior,60], [nun,61], [obedientiary,62], [ordinand,63], [ostiary,64], [palmer,65], [papal chamberlain,66], [papal legate,67], [pardoner,68], [parish priest,69], [parochial vicar,70], [parson,71], [pastor,72], [patriarch,73], [patriarchal vicar,74], [pilgrim,75], [pontifex,76], [pontifical delegate,77], [pope,78], [postulant,79], [prebendary,80], [precentor,81], [prefect apostolic,82], [prelate,83], [presbyter,84], [priest,85], [priestess,86], [primate (religion),87], [primus,88], [prior,89], [prioress,90], [proflamen,91], [prophet,92], [provost,93], [rabbi,94], [rector,95], [reeve,96], [sacristan,97], [secular clergy,98], [sexton,99], [shaman,100], [sister,101], [subdeacon,102], [suffragan,103], [summoner (law),104], [territorial abbot,105], [territorial prelate,106], [theologian,107], [vicar,108], [vicar forane,109]]
