@@ -2,15 +2,15 @@ rails new test_app -d mysql -m app-template.rb;
 
 rails g bootstrap:themed users
 
-rails g scaffold universe  name:string description:text user:references; 
-rails g bootstrap:themed universes
+rails g scaffold universe  name:string description:text user:references --skip-stylesheets; 
+rails g bootstrap:themed universes -f
 
-rails g scaffold location  name:string description:text universe:references;
+rails g scaffold location  name:string description:text universe:references --skip-stylesheets;
 rails g migration add_ancestry_to_location ancestry:string;
-rails g bootstrap:themed locations
+rails g bootstrap:themed locations -f
 
-rails g scaffold character name:string description:text
-rails g bootstrap:themed characters
-rails g model char_virtues      selfcontrol:string approach:string efficacy:string regard:string character:references
-rails g model char_vices        selfcontrol:string approach:string efficacy:string regard:string character:references
-rails g model char_archetype    type:string motto:string core_desire:string goal:string greatest_fear:string strategy:string weakness:string talent:string  character:references
+rails g scaffold character name:string description:text universe:references --skip-stylesheets;
+rails g bootstrap:themed characters -f
+rails g model char_virtues      selfcontrol:string approach:string efficacy:string regard:string character:references;
+rails g model char_vices        selfcontrol:string approach:string efficacy:string regard:string character:references;
+rails g model char_archetype    type:string motto:string core_desire:string goal:string greatest_fear:string strategy:string weakness:string talent:string  character:references;

@@ -4,10 +4,6 @@ FactoryGirl.define do
   factory :character do
     name "MyString"
     description "MyText"
-    selfcontrol "MyString"
-    approach "MyString"
-    efficacy "MyString"
-    regard "MyString"
     universe nil
   end
 end

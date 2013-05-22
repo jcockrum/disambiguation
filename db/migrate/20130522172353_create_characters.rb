@@ -3,10 +3,6 @@ class CreateCharacters < ActiveRecord::Migration
     create_table :characters do |t|
       t.string :name
       t.text :description
-      t.string :selfcontrol
-      t.string :approach
-      t.string :efficacy
-      t.string :regard
       t.references :universe
 
       t.timestamps
