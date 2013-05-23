@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
     @current_universe ||=Universe.find(session[:universe_id])
   end
 
+
 end
